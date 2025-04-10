@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
-import { Image, Text, View } from "@react-pdf/renderer";
 import { currencyList } from "@/lib/currency";
 import { pdfTypography, pdfUtils } from "@/lib/pdfStyles";
+import { Text, View } from "@react-pdf/renderer";
+import React from "react";
 
 interface PaymentDetailsPdfProps extends PaymentDetails {
   countryImageUrl: string;
@@ -80,7 +80,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             </Text>
           </View>
           <View style={pdfUtils.flexRowItemCenter}>
-            <Text style={pdfTypography.paymentTitle}>Swift Code</Text>
+            <Text style={pdfTypography.paymentTitle}>BSB number</Text>
             <Text
               style={{
                 flex: 1,
@@ -121,7 +121,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
           ) : undefined}
         </View>
       </View>
-      <View
+      {/* <View
         style={{
           flex: 1,
           paddingLeft: 40,
@@ -156,7 +156,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             </View>
           </View>
         )}
-      </View>
+      </View> */}
     </View>
   );
 };

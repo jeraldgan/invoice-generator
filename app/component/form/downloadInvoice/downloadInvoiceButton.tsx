@@ -1,16 +1,15 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Document, Font, Page } from "@react-pdf/renderer";
-import { CheckCircle2, Download, LoaderIcon, SplineIcon } from "lucide-react";
-import { PdfDetails } from "../pdfDetails";
 import { useData } from "@/app/hooks/useData";
-import { pdfContainers } from "@/lib/pdfStyles";
-import { saveAs } from "file-saver";
-import { pdf } from "@react-pdf/renderer";
-import { svgToDataUri } from "@/lib/svgToDataUri";
-import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { currencyList } from "@/lib/currency";
+import { pdfContainers } from "@/lib/pdfStyles";
+import { svgToDataUri } from "@/lib/svgToDataUri";
+import { Document, Font, Page, pdf } from "@react-pdf/renderer";
+import { saveAs } from "file-saver";
+import { CheckCircle2, Download, LoaderIcon } from "lucide-react";
+import { useEffect, useState } from "react";
+import { PdfDetails } from "../pdfDetails";
 export const DownloadInvoiceButton = () => {
   const [status, setStatus] = useState<
     "downloaded" | "downloading" | "not-downloaded"
@@ -110,6 +109,8 @@ export const DownloadInvoiceButton = () => {
     </div>
   );
 };
+
+// Font.registerHyphenationCallback((word) => word.split(" "));
 
 Font.register({
   family: "Geist",

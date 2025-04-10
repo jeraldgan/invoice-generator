@@ -1,10 +1,11 @@
 "use client";
-import Image from "next/image";
-import { UserInputForm } from "@/app/component/form/userInputForm";
 import { FormSteps } from "@/app/component/form/step/fromSteps";
+import { UserInputForm } from "@/app/component/form/userInputForm";
+import { useCsvData } from "@/app/hooks/useCsvData";
 import { UserDataPreview } from "@/app/new/component/userDataPreview";
-import { useForm, FormProvider } from "react-hook-form";
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
 
 export const NewInvoiceForm = () => {
   const methods = useForm();
@@ -22,6 +23,14 @@ export const NewInvoiceForm = () => {
       }
     }
   }, []);
+
+  const { parseTimesheet } = useCsvData();
+
+  useEffect(() => {
+    // Note: The path starts from the public directory
+    // If your file is in public/data/timesheet.csv, use '/data/timesheet.csv'
+    parseTimesheet("/timesheet.csv");
+  }, [parseTimesheet]);
 
   return (
     <>

@@ -1,5 +1,5 @@
-import CustomTextInput from "@/app/component/ui/customTextInput";
 import CustomNumberInput from "@/app/component/ui/customNumberInput";
+import CustomTextInput from "@/app/component/ui/customTextInput";
 import ImageInput from "@/app/component/ui/imageInput";
 
 export const YourDetailsForm = () => (
@@ -46,7 +46,7 @@ export const YourDetailsForm = () => (
       variableName="yourCountry"
     />
     <CustomTextInput
-      label="Tax ID"
+      label="ABN"
       placeholder="GSTIN 1234"
       variableName="yourTaxId"
     />

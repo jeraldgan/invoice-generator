@@ -31,14 +31,14 @@ export const InvoiceTermsPreview: React.FC<
           {issueDate ? format(issueDate, "do MMM yyyy'") : ""}
         </p>
       </div>
-      <div>
+      {/* <div>
         <p className="text-[11px] text-neutral-400 font-semibold uppercase text-right">
           Due Date
         </p>
         <p className="font-medium text-xs">
           {dueDate ? format(dueDate, "do MMM yyyy'") : ""}
         </p>
-      </div>
+      </div> */}
     </div>
   </div>
 );

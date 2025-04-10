@@ -16,13 +16,6 @@ export const YourDetailsPreview: React.FC<YourDetails> = ({
     <p className="text-[11px] text-neutral-400 font-semibold uppercase pb-3.5">
       From
     </p>
-    <div className="h-10 mb-3">
-      {yourLogo ? (
-        <img src={yourLogo} alt="Company Logo" className="h-10 rounded-md" />
-      ) : (
-        <div className="rounded-full bg-neutral-100 h-10 w-10 animate-pulse" />
-      )}
-    </div>
     {yourName ? (
       <p className="text-2xl font-medium">{yourName}</p>
     ) : (
@@ -51,7 +44,7 @@ export const YourDetailsPreview: React.FC<YourDetails> = ({
       ) : (
         <div className="rounded-md bg-neutral-100 h-4 w-3/6 animate-pulse my-2" />
       )}
-      {yourTaxId && <p>Tax ID:{yourTaxId}</p>}
+      {yourTaxId && <p>ABN:{yourTaxId}</p>}
     </div>
   </div>
 );

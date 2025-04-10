@@ -1,7 +1,7 @@
-import React from "react";
+import { pdfContainers, pdfTypography, pdfUtils } from "@/lib/pdfStyles";
 import { Text, View } from "@react-pdf/renderer";
 import { format } from "date-fns";
-import { pdfTypography, pdfContainers, pdfUtils } from "@/lib/pdfStyles";
+import React from "react";
 
 export const InvoiceTermsPdf: React.FC<InvoiceTerms> = ({
   invoiceNumber,
@@ -27,12 +27,12 @@ export const InvoiceTermsPdf: React.FC<InvoiceTerms> = ({
           {issueDate ? format(issueDate, "do MMM yyyy") : ""}
         </Text>
       </View>
-      <View>
+      {/* <View>
         <Text style={pdfTypography.title}>Due Date</Text>
         <Text style={pdfTypography.subTitle}>
           {dueDate ? format(dueDate, "do MMM yyyy") : ""}
         </Text>
-      </View>
+      </View> */}
     </View>
   </View>
 );

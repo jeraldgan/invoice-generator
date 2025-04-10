@@ -1,5 +1,5 @@
-import CustomTextInput from "@/app/component/ui/customTextInput";
 import CustomNumberInput from "@/app/component/ui/customNumberInput";
+import CustomTextInput from "@/app/component/ui/customTextInput";
 
 export const PaymentDetailsForm = () => (
   <div className="pt-24">
@@ -30,7 +30,7 @@ export const PaymentDetailsForm = () => (
       variableName="routingCode"
     />
     <CustomNumberInput
-      label="Swift code"
+      label="BSB Number"
       placeholder="HSBCINAA123"
       variableName="swiftCode"
     />

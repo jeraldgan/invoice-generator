@@ -1,7 +1,6 @@
+import { GeistSans } from "geist/font/sans";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { GeistSans } from "geist/font/sans";
-import Script from "next/script";
 
 export const viewport: Viewport = {
   themeColor: "#f97316",
@@ -10,7 +9,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
+  // metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
   alternates: {
     canonical: "/",
     languages: {

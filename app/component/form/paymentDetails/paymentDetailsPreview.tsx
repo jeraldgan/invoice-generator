@@ -49,9 +49,7 @@ export const PaymentDetailsPreview: React.FC<
             )}
           </div>
           <div className="mb-2 grid grid-cols-2 items-center">
-            <p className="truncate text-xs font-medium text-gray-500">
-              Account Number
-            </p>
+            <p className="text-xs font-medium text-gray-500">Account Number</p>
             {accountNumber ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {accountNumber}
@@ -61,9 +59,7 @@ export const PaymentDetailsPreview: React.FC<
             )}
           </div>
           <div className="mb-2 grid grid-cols-2 items-center">
-            <p className="truncate text-xs font-medium text-gray-500">
-              Account Name
-            </p>
+            <p className="text-xs font-medium text-gray-500">Account Name</p>
             {accountName ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {accountName}
@@ -74,7 +70,7 @@ export const PaymentDetailsPreview: React.FC<
           </div>
           <div className="mb-2 grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
-              Swift Code
+              BSB Number
             </p>
             {swiftCode ? (
               <p className="flex truncate text-xs font-medium text-gray-600">
@@ -106,7 +102,7 @@ export const PaymentDetailsPreview: React.FC<
           )}
         </div>
       </div>
-      <div className="py-4 px-10">
+      {/* <div className="py-4 px-10">
         <p className="text-[11px] text-neutral-400 font-medium uppercase mb-3">
           Payable in
         </p>
@@ -126,7 +122,7 @@ export const PaymentDetailsPreview: React.FC<
             </div>
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

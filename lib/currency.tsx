@@ -1,20 +1,20 @@
 import {
-  US,
-  IN,
+  AU,
+  BD,
+  BR,
   EU,
+  FlagComponent,
+  GB,
+  ID,
+  IL,
   JP,
   KR,
-  IL,
-  VN,
-  BD,
-  RU,
-  BR,
-  UA,
   KZ,
+  RU,
   TW,
-  GB,
-  FlagComponent,
-  ID,
+  UA,
+  US,
+  VN,
 } from "country-flag-icons/react/1x1";
 
 export const currencyList: {
@@ -30,15 +30,15 @@ export const currencyList: {
   };
 }[] = [
   {
-    value: "INR",
-    label: "INR",
+    value: "AUD",
+    label: "AUD",
     details: {
-      country: "India",
-      currencySymbol: "₹",
-      currencyName: "Indian Rupee",
-      currencyShortForm: "INR",
-      icon: IN,
-      iconName: "IN",
+      country: "Australia",
+      currencySymbol: "$",
+      currencyName: "Australian Dollar",
+      currencyShortForm: "AUD",
+      icon: AU,
+      iconName: "AU",
     },
   },
   {
