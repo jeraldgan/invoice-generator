@@ -1,38 +1,52 @@
-import CustomNumberInput from "@/app/component/ui/customNumberInput";
 import CustomTextInput from "@/app/component/ui/customTextInput";
 
 export const PaymentDetailsForm = () => (
   <div className="pt-24">
     <p className="text-2xl font-semibold pb-3">Payment Details</p>
     <CustomTextInput
-      label="Bank name"
-      placeholder="HSBC"
-      variableName="bankName"
-    />
-    <CustomTextInput
-      label="Account number"
-      placeholder="8920804195"
-      variableName="accountNumber"
-    />
-    <CustomTextInput
       label="Account Name"
-      placeholder="Pranav"
+      placeholder="Tang Chow Jerald Gan"
       variableName="accountName"
     />
     <CustomTextInput
-      label="IFSC code"
-      placeholder="HSBC0560002"
-      variableName="ifscCode"
+      label="Account Number"
+      placeholder="8310963274"
+      variableName="accountNumber"
     />
     <CustomTextInput
-      label="Routing number"
-      placeholder="0804189592"
-      variableName="routingCode"
+      label="Account Type"
+      placeholder="Checking"
+      variableName="accountType"
     />
-    <CustomNumberInput
-      label="BSB Number"
-      placeholder="HSBCINAA123"
+    <CustomTextInput
+      label="Routing Number (US)"
+      placeholder="026073150"
+      variableName="routingNumber"
+    />
+    <CustomTextInput
+      label="Swift/BIC (International)"
+      placeholder="CMFGUS33"
       variableName="swiftCode"
+    />
+    <CustomTextInput
+      label="Bank Name"
+      placeholder="Community Federal Savings Bank"
+      variableName="bankName"
+    />
+    <CustomTextInput
+      label="Bank Address"
+      placeholder="89-16 Jamaica Ave, Woodhaven, NY, 11421, United States"
+      variableName="bankAddress"
+    />
+    <CustomTextInput
+      label="Wise Email"
+      placeholder="your-email@example.com"
+      variableName="wiseEmail"
+    />
+    <CustomTextInput
+      label="Wise Link"
+      placeholder="https://wise.com/pay/your-link"
+      variableName="wiseLink"
     />
   </div>
 );

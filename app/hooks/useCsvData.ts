@@ -13,7 +13,7 @@ export const useCsvData = () => {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const parseTimesheet = useCallback(async (publicFilePath: string) => {
+  const parseTimesheet = useCallback(async (publicFilePath: string, hourlyRate?: number) => {
     setIsLoading(true);
     setError(null);
 
@@ -39,7 +39,7 @@ export const useCsvData = () => {
 
         return {
           itemDescription: `${data.Date}\n${workItems.join("\n")}`,
-          amount: 60,
+          amount: hourlyRate || 60, // Use provided hourly rate or default to 60
           qty: parseFloat(data["Time spent (hours)"]),
         };
       });

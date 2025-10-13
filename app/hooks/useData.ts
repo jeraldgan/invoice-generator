@@ -24,14 +24,19 @@ export const useData = () => {
   const note = useGetValue("note");
   const discount = useGetValue("discount");
   const taxRate = useGetValue("tax");
+  const hourlyRate = useGetValue("hourlyRate");
   const items = useItemParams();
 
   const bankName = useGetValue("bankName");
   const accountNumber = useGetValue("accountNumber");
   const accountName = useGetValue("accountName");
-  const routingCode = useGetValue("routingCode");
+  const accountType = useGetValue("accountType");
+  const routingCode = useGetValue("routingNumber");
   const swiftCode = useGetValue("swiftCode");
   const ifscCode = useGetValue("ifscCode");
+  const bankAddress = useGetValue("bankAddress");
+  const wiseEmail = useGetValue("wiseEmail");
+  const wiseLink = useGetValue("wiseLink");
 
   const invoiceNumber = useGetValue("invoiceNo");
   const issueDate = useGetValue("issueDate");
@@ -49,6 +54,7 @@ export const useData = () => {
     note,
     discount,
     taxRate,
+    hourlyRate,
     items,
     currency,
   };
@@ -57,9 +63,13 @@ export const useData = () => {
     bankName: bankName,
     accountNumber: accountNumber,
     accountName: accountName,
+    accountType: accountType,
     routingCode: routingCode,
     swiftCode: swiftCode,
     ifscCode: ifscCode,
+    bankAddress: bankAddress,
+    wiseEmail: wiseEmail,
+    wiseLink: wiseLink,
     currency
   };
 

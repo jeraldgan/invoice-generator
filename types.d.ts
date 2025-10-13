@@ -26,6 +26,7 @@ interface InvoiceItemDetails {
   note?: string | null;
   discount?: string | null;
   taxRate?: string | null;
+  hourlyRate?: string | null;
   items: Item[];
   currency?: string;
 }
@@ -46,9 +47,13 @@ interface PaymentDetails {
   bankName?: string | null;
   accountNumber?: string | null;
   accountName?: string | null;
+  accountType?: string | null;
   routingCode?: string | null;
   swiftCode?: string | null;
   ifscCode?: string | null;
+  bankAddress?: string | null;
+  wiseEmail?: string | null;
+  wiseLink?: string | null;
   currency?: string;
 }
 

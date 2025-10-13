@@ -119,6 +119,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
                 textAlign: "right",
               }}
             >
+              {currencyDetails?.iconName}
               {currencyDetails?.currencySymbol}
               {addCommasToNumber(subtotal)}
             </Text>
@@ -142,6 +143,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
                   textAlign: "right",
                 }}
               >
+                {currencyDetails?.iconName}
                 {currencyDetails?.currencySymbol}
                 {discount ? addCommasToNumber(+discount) : ""}
               </Text>
@@ -184,6 +186,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
             <Text
               style={{ ...pdfTypography.amount, textAlign: "right", flex: 1 }}
             >
+              {currencyDetails?.iconName}
               {currencyDetails?.currencySymbol}
               {addCommasToNumber(totalAmount)}
             </Text>

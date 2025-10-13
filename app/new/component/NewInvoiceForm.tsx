@@ -27,9 +27,13 @@ export const NewInvoiceForm = () => {
   const { parseTimesheet } = useCsvData();
 
   useEffect(() => {
+    // Get hourly rate from localStorage or use default 60
+    const hourlyRateStr = localStorage.getItem("hourlyRate");
+    const hourlyRate = hourlyRateStr ? parseFloat(hourlyRateStr) : 60;
+
     // Note: The path starts from the public directory
     // If your file is in public/data/timesheet.csv, use '/data/timesheet.csv'
-    parseTimesheet("/timesheet.csv");
+    parseTimesheet("/timesheet.csv", hourlyRate);
   }, [parseTimesheet]);
 
   return (
