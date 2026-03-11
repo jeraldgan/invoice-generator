@@ -47,7 +47,7 @@ export const CompanyDetailsForm = () => (
     />
     <CustomTextInput
       label="ABN"
-      placeholder="GSTIN 1234"
+      placeholder="12 345 678 901"
       variableName="companyTaxId"
     />
   </div>

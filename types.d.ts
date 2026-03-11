@@ -47,13 +47,7 @@ interface PaymentDetails {
   bankName?: string | null;
   accountNumber?: string | null;
   accountName?: string | null;
-  accountType?: string | null;
-  routingCode?: string | null;
-  swiftCode?: string | null;
-  ifscCode?: string | null;
-  bankAddress?: string | null;
-  wiseEmail?: string | null;
-  wiseLink?: string | null;
+  bsbNumber?: string | null;
   currency?: string;
 }
 

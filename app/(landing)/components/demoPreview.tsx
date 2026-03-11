@@ -36,13 +36,11 @@ const defaultValue = {
     yourZip: "560038",
   },
   paymentDetails: {
-    bankName: "Axis Bank",
-    accountNumber: "1234567890",
-    accountName: "PRANAV",
-    routingCode: "123456",
-    swiftCode: "AXISINBB1234",
-    ifscCode: "UTIB0000000",
-    currency: "INR",
+    bankName: "Commonwealth Bank",
+    accountNumber: "1234 5678",
+    accountName: "PRANAV PATEL",
+    bsbNumber: "062-000",
+    currency: "AUD",
   },
   invoiceTerms: {
     invoiceNumber: "Invoice #25",
@@ -52,7 +50,7 @@ const defaultValue = {
   invoiceDetails: {
     note: "Services Period  21/03/2024 to 20/04/2024",
     discount: "22000",
-    taxRate: "18",
+    taxRate: "10",
     items: [
       {
         itemDescription: "Software Development Services",
@@ -65,7 +63,7 @@ const defaultValue = {
         qty: 0,
       },
     ],
-    currency: "INR",
+    currency: "AUD",
   },
 };
 export default DemoPreview;

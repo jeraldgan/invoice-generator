@@ -12,14 +12,12 @@ export const PdfDetails = ({
   invoiceDetails,
   paymentDetails,
   invoiceTerms,
-  countryImageUrl,
 }: {
   yourDetails: YourDetails;
   companyDetails: CompanyDetails;
   invoiceDetails: InvoiceItemDetails;
   paymentDetails: PaymentDetails;
   invoiceTerms: InvoiceTerms;
-  countryImageUrl: string;
 }) => (
   <View>
     <InvoiceTermsPdf {...invoiceTerms} />
@@ -39,10 +37,7 @@ export const PdfDetails = ({
         <InvoiceDetailsPdf {...invoiceDetails} />
       </View>
       <View>
-        <PaymentDetailsPdf
-          {...paymentDetails}
-          countryImageUrl={countryImageUrl}
-        />
+        <PaymentDetailsPdf {...paymentDetails} />
       </View>
     </View>
   </View>

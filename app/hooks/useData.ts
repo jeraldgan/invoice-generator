@@ -30,19 +30,13 @@ export const useData = () => {
   const bankName = useGetValue("bankName");
   const accountNumber = useGetValue("accountNumber");
   const accountName = useGetValue("accountName");
-  const accountType = useGetValue("accountType");
-  const routingCode = useGetValue("routingNumber");
-  const swiftCode = useGetValue("swiftCode");
-  const ifscCode = useGetValue("ifscCode");
-  const bankAddress = useGetValue("bankAddress");
-  const wiseEmail = useGetValue("wiseEmail");
-  const wiseLink = useGetValue("wiseLink");
+  const bsbNumber = useGetValue("bsbNumber");
 
   const invoiceNumber = useGetValue("invoiceNo");
   const issueDate = useGetValue("issueDate");
   const dueDate = useGetValue("dueDate");
 
-  const currency = useGetValue("currency") || "INR";
+  const currency = useGetValue("currency") || "AUD";
 
   const invoiceTerms = {
     invoiceNumber,
@@ -60,17 +54,11 @@ export const useData = () => {
   };
 
   const paymentDetails = {
-    bankName: bankName,
-    accountNumber: accountNumber,
-    accountName: accountName,
-    accountType: accountType,
-    routingCode: routingCode,
-    swiftCode: swiftCode,
-    ifscCode: ifscCode,
-    bankAddress: bankAddress,
-    wiseEmail: wiseEmail,
-    wiseLink: wiseLink,
-    currency
+    bankName,
+    accountNumber,
+    accountName,
+    bsbNumber,
+    currency,
   };
 
   const yourDetails = {

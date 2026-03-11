@@ -8,7 +8,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
   discount,
   taxRate,
   items,
-  currency = "INR",
+  currency = "AUD",
 }) => {
   const currencyType = currency;
   const currencyDetails = currencyList.find(
@@ -159,7 +159,7 @@ export const InvoiceDetailsPdf: React.FC<InvoiceItemDetails> = ({
               }}
             >
               <Text style={{ ...pdfTypography.itemDescription, flex: 1 }}>
-                Tax ({taxRate})%
+                GST ({taxRate}%)
               </Text>
               <Text
                 style={{

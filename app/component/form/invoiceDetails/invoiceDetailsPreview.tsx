@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 export const InvoiceDetailsPreview: React.FC<
   InvoiceItemDetails & { onClick?: (step: string) => void }
-> = ({ note, discount, taxRate, items, currency = "INR", onClick }) => {
+> = ({ note, discount, taxRate, items, currency = "AUD", onClick }) => {
   const currencyType = currency;
   const currencyDetails = currencyList.find(
     (currency) => currency.value.toLowerCase() === currencyType.toLowerCase()
@@ -113,7 +113,7 @@ export const InvoiceDetailsPreview: React.FC<
           {taxRate && (
             <div className="flex justify-between items-center mx-10 border-b border-dashed py-3">
               <p className="flex truncate text-xs font-medium text-gray-600">
-                Tax ({taxRate})%
+                GST ({taxRate}%)
               </p>
               <p className="flex truncate text-xs font-medium text-gray-600">
                 {currencyDetails?.currencySymbol}

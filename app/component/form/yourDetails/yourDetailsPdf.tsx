@@ -33,7 +33,7 @@ export const YourDetailsPDF: React.FC<YourDetails> = ({
         </Text>
       )}
       {yourCountry && <Text style={{ marginBottom: 4 }}>{yourCountry}</Text>}
-      {yourTaxId && <Text>ABN:{yourTaxId}</Text>}
+      {yourTaxId && <Text>ABN: {yourTaxId}</Text>}
     </View>
   </View>
 );

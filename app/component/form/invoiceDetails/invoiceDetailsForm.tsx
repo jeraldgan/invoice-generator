@@ -10,7 +10,7 @@ import { Controller } from "react-hook-form";
 import { getItemValue } from "@/lib/getInitialValue";
 
 export const InvoiceDetailsForm = () => {
-  const value = useGetValue("currency", "INR");
+  const value = useGetValue("currency", "AUD");
   const currencyDetails = currencyList.find(
     (currency) => currency.value.toLowerCase() === value.toLowerCase()
   )?.details;
@@ -205,8 +205,8 @@ export const InvoiceDetailsForm = () => {
                 variableName="discount"
               />
               <CustomNumberInput
-                label="Taxes"
-                placeholder="0%"
+                label="GST"
+                placeholder="10%"
                 variableName="tax"
               />
               <div className="flex items-center gap-2">
