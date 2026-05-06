@@ -14,30 +14,46 @@ export const CompanyDetailsPdf: React.FC<CompanyDetails> = ({
   companyLogo,
   companyTaxId,
   companyZip,
-}) => (
-  <View style={pdfContainers.CompanyDetails}>
-    <Text style={{ ...pdfTypography.title, marginBottom: 14 }}>To</Text>
-    {companyName && (
-      <Text style={{ ...pdfTypography.text2xl, flexWrap: "wrap" }}>
-        {companyName}
-      </Text>
-    )}
-    {email && (
-      <Text style={{ ...pdfTypography.description, marginBottom: 12 }}>
-        {email}
-      </Text>
-    )}
-    <View style={pdfTypography.description}>
-      {companyAddress && <Text>{companyAddress}</Text>}
-      {(companyCity || companyState || companyZip) && (
-        <Text style={{ marginBottom: 2 }}>
-          {companyCity}, {companyState} {companyZip}
+}) => {
+  const formattedLocation = [companyCity, companyState]
+    .filter(Boolean)
+    .join(", ");
+  const formattedEmails = email
+    ?.split(",")
+    .map((value) => value.trim())
+    .filter(Boolean)
+    .join(",\n");
+  const formattedCompanyTaxId = companyTaxId
+    ?.replace(/[\u200E\u200F\u202A-\u202E\u2066-\u2069]/g, "")
+    .replace(/,/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return (
+    <View style={pdfContainers.CompanyDetails}>
+      <Text style={{ ...pdfTypography.title, marginBottom: 14 }}>To</Text>
+      {companyName && (
+        <Text style={{ ...pdfTypography.text2xl, flexWrap: "wrap" }}>
+          {companyName}
         </Text>
       )}
-      {companyCountry && (
-        <Text style={{ marginBottom: 4 }}>{companyCountry}</Text>
+      {email && (
+        <Text style={{ ...pdfTypography.description, marginBottom: 12 }}>
+          {formattedEmails}
+        </Text>
       )}
-      {companyTaxId && <Text>ABN: {companyTaxId}</Text>}
+      <View style={pdfTypography.description}>
+        {companyAddress && <Text>{companyAddress}</Text>}
+        {(companyCity || companyState || companyZip) && (
+          <Text style={{ marginBottom: 2 }}>
+            {[formattedLocation, companyZip].filter(Boolean).join(" ")}
+          </Text>
+        )}
+        {companyCountry && (
+          <Text style={{ marginBottom: 4 }}>{companyCountry}</Text>
+        )}
+        {formattedCompanyTaxId && <Text>ABN: {formattedCompanyTaxId}</Text>}
+      </View>
     </View>
-  </View>
-);
+  );
+};
